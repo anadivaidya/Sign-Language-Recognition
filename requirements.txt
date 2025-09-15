@@ -1,0 +1,10 @@
+# Python Libraries
+numpy
+pandas
+matplotlib
+opencv-python
+scikit-learn
+tensorflow
+flask
+fastapi
+uvicorn
