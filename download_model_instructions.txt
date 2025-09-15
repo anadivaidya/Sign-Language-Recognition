@@ -1,0 +1,32 @@
+# Instructions to Download and Set Up the Hand Detection Model
+
+1. **Download the Model Files**:
+   - Visit the TensorFlow Model Zoo: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+   - Download the SSD MobileNet V2 model trained on the COCO dataset.
+     - Direct Link: [SSD MobileNet V2 COCO](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz)
+
+2. **Extract the Files**:
+   - Extract the downloaded `.tar.gz` file.
+   - Locate the following files:
+     - `frozen_inference_graph.pb`
+     - `ssd_mobilenet_v2_coco.pbtxt` (you may need to create this file manually or find it online).
+
+3. **Rename and Place the Files**:
+   - Rename `frozen_inference_graph.pb` to `hand_model.pb`.
+   - Rename `ssd_mobilenet_v2_coco.pbtxt` to `hand_model.pbtxt`.
+   - Move both files to the directory: `C:/Users/asus/Desktop/Hackathon/SLR`.
+
+4. **Verify the Setup**:
+   - Ensure the files `hand_model.pb` and `hand_model.pbtxt` are in the correct directory.
+   - Run the script `real_world_prediction.py` to test the setup.
+
+5. **Troubleshooting**:
+   - If you encounter errors, ensure the file paths in the script are correct:
+     ```python
+     HAND_MODEL = "hand_model.pb"
+     HAND_CONFIG = "hand_model.pbtxt"
+     ```
+   - Check that the OpenCV version supports TensorFlow models.
+
+6. **Optional**:
+   - If you need further assistance, consult the OpenCV DNN module documentation: https://docs.opencv.org/master/d6/d0f/group__dnn.html
